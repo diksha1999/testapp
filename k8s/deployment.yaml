@@ -15,7 +15,7 @@ spec:
         app: py-app
     spec:
       containers:
-        - image: quay.io/rhn_support_disharma/testpyapp:1.0
+        - image: image-registry.openshift-image-registry.svc:5000/test-pipelines/py-app:latest
           imagePullPolicy: Always
           name: py-app
           ports:

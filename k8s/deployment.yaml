@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: pyapp
-  name: pyapp
+    app: py-app
+  name: py-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pyapp
+      app: py-app
   template:
     metadata:
       labels:
-        app: pyapp
+        app: py-app
     spec:
       containers:
         - image: quay.io/rhn_support_disharma/testpyapp:1.0
           imagePullPolicy: Always
-          name: pyapp
+          name: py-app
           ports:
             - containerPort: 9000
               protocol: TCP

@@ -4,6 +4,8 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
+    cpu.override: "200m"
+    memory.override: "256Mi"
 spec:
   replicas: 1
   selector:
